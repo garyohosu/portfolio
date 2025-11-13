@@ -6,6 +6,59 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.2] - 2025-01-13
+
+### Fixed
+
+**英語版の日本語残留テキストを完全修正**
+
+英語版（`?lang=en`）に残っていた日本語テキストをすべて英語化しました。
+
+#### 修正箇所
+
+1. **Skills Section** - リスト項目を翻訳
+   - 日本語版: AI開発ツール、技術記事執筆、CVW手法など
+   - 英語版: Food & Cuisine, Q&A Writing, Human-AI Collaboration など
+
+2. **Social Links Section** - カードタイトルと説明文を翻訳
+   - ブログ → Blog (CVW Research & Practice)
+   - note → note (Japanese Articles & Essays)
+   - X (Twitter) → X (Twitter) (Tech Insights & Updates)
+   - Quora → Quora (24,000+ Followers)
+   - GitHub → GitHub (Code & Projects)
+
+3. **Footer** - すべてのテキストを翻訳
+   - ブランド説明: AI時代の創作研究者 → Cultural Bridge Builder
+   - リンクタイトル: リンク → Links
+   - SNSタイトル: SNS → Social
+   - ナビゲーションリンク: すべて英語化（既存のnav_*キーを再利用）
+
+#### 技術詳細
+
+**JavaScript (`js/main.js`):**
+```javascript
+// 追加した翻訳キー（日本語版）
+skill1_item1~4, skill2_item1~4, skill3_item1~4, skill4_item1~4
+social_blog_title, social_blog_desc, social_note_title, social_note_desc
+social_x_title, social_x_desc, social_quora_title, social_quora_desc
+social_github_title, social_github_desc
+footer_brand_desc, footer_links_title, footer_social_title
+
+// 追加した翻訳キー（英語版）
+同様のキー構造で英語テキストを追加
+```
+
+**HTML (`index.html`):**
+- 全スキルリスト項目に `data-i18n` 属性追加（16個）
+- 全ソーシャルカードのタイトル・説明に `data-i18n` 属性追加（10個）
+- フッターの全テキスト要素に `data-i18n` 属性追加（8個）
+
+**合計**: 34個の新しい翻訳キーを追加し、完全バイリンガル対応を達成
+
+これにより、英語版（`?lang=en`）ですべてのテキストが適切に英語化されます。
+
+---
+
 ## [1.1.1] - 2025-01-13
 
 ### Added

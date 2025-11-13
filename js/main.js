@@ -35,6 +35,30 @@ const translations = {
         skill3_title: 'CVW手法',
         skill4_title: '組み込みプログラミング',
 
+        // Skill 1 - AI Tools
+        skill1_item1: 'Codex CLI',
+        skill1_item2: 'Gemini CLI',
+        skill1_item3: 'Cline MCP',
+        skill1_item4: 'Cursor',
+
+        // Skill 2 - Technical Writing
+        skill2_item1: '技術記事執筆',
+        skill2_item2: 'チュートリアル作成',
+        skill2_item3: 'ドキュメント作成',
+        skill2_item4: 'コンテンツ企画',
+
+        // Skill 3 - CVW
+        skill3_item1: '人間とAIの協働創作',
+        skill3_item2: 'Creative Vibe Writing',
+        skill3_item3: '新しい創作手法の研究',
+        skill3_item4: '実践的手法の開発',
+
+        // Skill 4 - Embedded Programming
+        skill4_item1: '組み込みシステム開発',
+        skill4_item2: '低レイヤープログラミング',
+        skill4_item3: 'システム設計',
+        skill4_item4: '技術的知見',
+
         // Achievements Section
         achievements_title: '実績',
         stat1_number: '24,000+',
@@ -49,6 +73,21 @@ const translations = {
         // Social Section
         social_title: '執筆活動・SNS',
         social_desc: '各プラットフォームで技術記事を発信しています',
+        social_blog_title: 'ブログ',
+        social_blog_desc: 'CVW研究と実践の記録',
+        social_note_title: 'note',
+        social_note_desc: '技術記事やエッセイを執筆',
+        social_x_title: 'X (Twitter)',
+        social_x_desc: '日々の技術的な発見を共有',
+        social_quora_title: 'Quora',
+        social_quora_desc: '24,000人以上のフォロワー',
+        social_github_title: 'GitHub',
+        social_github_desc: 'コードとプロジェクトを公開',
+
+        // Footer
+        footer_brand_desc: 'AI時代の創作研究者',
+        footer_links_title: 'リンク',
+        footer_social_title: 'SNS',
 
         // Meta
         page_title: 'hantani - AI時代の創作研究者ポートフォリオ',
@@ -87,6 +126,30 @@ const translations = {
         skill3_title: 'AI Research',
         skill4_title: 'Technical Background',
 
+        // Skill 1 - Japanese Culture
+        skill1_item1: 'Food & Cuisine',
+        skill1_item2: 'Traditions & Customs',
+        skill1_item3: 'Daily Life Insights',
+        skill1_item4: 'Cultural Context',
+
+        // Skill 2 - Content Creation
+        skill2_item1: 'Q&A Writing',
+        skill2_item2: 'Cultural Explanations',
+        skill2_item3: 'Engaging Storytelling',
+        skill2_item4: 'Audience Engagement',
+
+        // Skill 3 - AI Research
+        skill3_item1: 'Human-AI Collaboration',
+        skill3_item2: 'Creative Vibe Writing',
+        skill3_item3: 'Methodology Development',
+        skill3_item4: 'Practical Applications',
+
+        // Skill 4 - Technical Background
+        skill4_item1: 'Embedded Systems',
+        skill4_item2: 'Low-level Programming',
+        skill4_item3: 'System Architecture',
+        skill4_item4: 'Technical Expertise',
+
         // Featured Answers Section (replaces Achievements)
         achievements_title: 'Featured Quora Answers',
         achievements_subtitle: 'Top 15 answers by views and engagement',
@@ -94,6 +157,21 @@ const translations = {
         // Social Section
         social_title: 'Connect With Me',
         social_desc: 'Follow my content across different platforms',
+        social_blog_title: 'Blog',
+        social_blog_desc: 'CVW Research & Practice',
+        social_note_title: 'note',
+        social_note_desc: 'Japanese Articles & Essays',
+        social_x_title: 'X (Twitter)',
+        social_x_desc: 'Tech Insights & Updates',
+        social_quora_title: 'Quora',
+        social_quora_desc: '24,000+ Followers',
+        social_github_title: 'GitHub',
+        social_github_desc: 'Code & Projects',
+
+        // Footer
+        footer_brand_desc: 'Cultural Bridge Builder',
+        footer_links_title: 'Links',
+        footer_social_title: 'Social',
 
         // Meta
         page_title: 'hantani - Cultural Bridge Builder & Japanese Culture Expert',
