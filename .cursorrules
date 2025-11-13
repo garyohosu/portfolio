@@ -1,0 +1,48 @@
+# Cursor AI Rules for Portfolio Project
+
+## 📝 最重要ルール: CHANGELOG.md の更新
+
+**絶対に守ること**: コードを変更したら必ず `CHANGELOG.md` を更新してください。
+
+変更を実装したら:
+1. `CHANGELOG.md` を開く
+2. 最新バージョンの下に変更内容を追加
+3. [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 形式に従う
+4. コミット前に必ず確認
+
+## 🌐 バイリンガル対応
+
+このプロジェクトは日本語/英語のバイリンガルサイトです：
+- `?lang=ja` - 日本語版（デフォルト）
+- `?lang=en` - 英語版
+
+### 翻訳追加時
+1. `js/main.js` の `translations` オブジェクトを更新（日本語と英語両方）
+2. HTMLに `data-i18n` 属性を追加
+3. 両言語でテスト
+4. **CHANGELOG.md を更新**
+
+## 📋 詳細ガイドライン
+
+詳細は以下のファイルを参照してください：
+- `AI_GUIDELINES.md` - 全AIツール共通のガイドライン
+- `.claude/claude.md` - Claude Code専用ガイドライン
+- `CHANGELOG.md` - 変更履歴（必ず更新）
+
+## ⚠️ デプロイ前チェック
+
+- [ ] ローカルテスト完了
+- [ ] 両言語で動作確認（`?lang=ja` と `?lang=en`）
+- [ ] レスポンシブデザイン確認
+- [ ] **CHANGELOG.md 更新済み**
+
+## 🎨 コーディング規約
+
+- セマンティックHTMLを使用
+- モバイルファーストCSS
+- ES6+ JavaScript
+- BEM命名規則を推奨
+
+---
+
+**記憶してください: 変更 → CHANGELOG.md 更新 → コミット**

@@ -6,6 +6,84 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.1] - 2025-01-13
+
+### Added
+
+**AI開発ツール用ガイドラインの整備**
+
+すべてのAI開発ツール（Claude Code, Codex CLI, Gemini CLI, Cursor等）で共通のルールを守るためのガイドラインファイルを追加しました。
+
+#### 新規ファイル
+
+1. **`AI_GUIDELINES.md`** - 全AIツール共通ガイドライン
+   - CHANGELOG.md更新の必須ルール
+   - バイリンガル運用ガイド
+   - デプロイ前チェックリスト
+   - コーディング規約
+   - 各AIツールでの読み込み方法
+
+2. **`.claude/claude.md`** - Claude Code専用ガイドライン
+   - プロジェクト固有のルール
+   - 変更履歴記録のルール
+   - バイリンガルサイト運用方法
+   - ファイル構造と参考資料
+
+3. **`.cursorrules`** - Cursor AI専用ルール
+   - CHANGELOG.md更新ルール（簡潔版）
+   - バイリンガル対応の基本
+   - 詳細ガイドラインへの参照
+
+#### 最重要ルールの明文化
+
+**「変更したら必ずCHANGELOG.mdを更新する」**
+
+このルールをすべてのガイドラインファイルで強調し、どのAI開発ツールを使用しても一貫してCHANGELOG.mdが更新されるようにしました。
+
+### Changed
+
+**README.md の大幅改善**
+
+- プロジェクトの詳細な説明を追加
+- バイリンガル対応の説明
+- AI開発ツール使用時の注意事項を追加
+- プロジェクト構造の図解
+- Quick Startガイド
+- 技術スタック詳細
+- デプロイ前チェックリスト
+- リンク集
+
+### Documentation
+
+**各AIツールでのガイドライン参照方法:**
+
+- **Claude Code**: `.claude/claude.md` を自動読み込み
+- **Cursor**: `.cursorrules` を自動読み込み
+- **Codex CLI**: プロジェクトルートの `AI_GUIDELINES.md` を参照
+- **Gemini CLI**: 開始時に `AI_GUIDELINES.md` への参照を明示
+
+**ファイル構成:**
+```
+portfolio/
+├── AI_GUIDELINES.md       # 全AIツール共通（NEW）
+├── CHANGELOG.md          # 変更履歴
+├── README.md             # プロジェクト説明（大幅更新）
+├── .claude/
+│   └── claude.md         # Claude専用（NEW）
+└── .cursorrules          # Cursor専用（NEW）
+```
+
+### Why This Matters
+
+複数のAI開発ツールを使用する際、各ツールが異なるルールで動作すると：
+- CHANGELOGの更新漏れが発生
+- コーディング規約の不統一
+- バイリンガル対応の片方だけ更新
+
+この問題を解決するため、すべてのAIツールが同じルールに従うよう設定ファイルを整備しました。
+
+---
+
 ## [1.1.0] - 2025-01-13
 
 ### Added - Comprehensive Bilingual Support
