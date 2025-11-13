@@ -680,6 +680,11 @@ section {
     transition: var(--transition-normal);
 }
 
+.social-card.blog .social-icon {
+    background-color: #ff6b35;
+    color: white;
+}
+
 .social-card.note .social-icon {
     background-color: #41c9b4;
     color: white;
