@@ -11,7 +11,19 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
+
+    <!-- Language alternates for SEO -->
+    <link rel="alternate" hreflang="ja" href="https://garyohosu.github.io/portfolio/?lang=ja">
+    <link rel="alternate" hreflang="en" href="https://garyohosu.github.io/portfolio/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://garyohosu.github.io/portfolio/">
+
+    <!-- Open Graph tags (will be updated by JavaScript) -->
+    <meta property="og:title" content="hantani - AI時代の創作研究者">
+    <meta property="og:description" content="AI時代の創作研究者・技術系ライター">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://garyohosu.github.io/portfolio/">
+    <meta property="og:image" content="https://garyohosu.github.io/portfolio/og-image.jpg">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,12 +33,18 @@
         <div class="container">
             <div class="nav-brand">hantani</div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">ホーム</a></li>
-                <li><a href="#about" class="nav-link">プロフィール</a></li>
-                <li><a href="#skills" class="nav-link">スキル</a></li>
-                <li><a href="#achievements" class="nav-link">実績</a></li>
-                <li><a href="#social" class="nav-link">執筆活動</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav_home">ホーム</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">プロフィール</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav_skills">スキル</a></li>
+                <li><a href="#achievements" class="nav-link" data-i18n="nav_achievements">実績</a></li>
+                <li><a href="#social" class="nav-link" data-i18n="nav_social">執筆活動</a></li>
             </ul>
+            <!-- Language Toggle -->
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-lang="ja">日本語</button>
+                <span class="lang-separator">|</span>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -44,16 +62,16 @@
                     <span class="hero-name">hantani</span>
                     <span class="hero-subtitle">Hantani Sadahiko</span>
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero_description">
                     AI時代の創作研究者・技術系ライター<br>
                     元組み込みプログラマー
                 </p>
-                <div class="hero-tagline">
+                <div class="hero-tagline" data-i18n="hero_tagline">
                     技術と文学を橋渡しする新時代のクリエイター
                 </div>
                 <div class="hero-cta">
-                    <a href="#about" class="btn btn-primary">もっと知る</a>
-                    <a href="#social" class="btn btn-secondary">執筆活動を見る</a>
+                    <a href="#about" class="btn btn-primary" data-i18n="hero_btn_primary">もっと知る</a>
+                    <a href="#social" class="btn btn-secondary" data-i18n="hero_btn_secondary">執筆活動を見る</a>
                 </div>
             </div>
         </div>
@@ -69,11 +87,39 @@
         </div>
     </section>
 
+    <!-- Stats Section - English Version Only -->
+    <section id="stats" class="stats" data-lang-only="en" style="display: none;">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fab fa-quora"></i></div>
+                    <div class="stat-number">24,000+</div>
+                    <div class="stat-label">Quora Followers</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Total Views</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-thumbs-up"></i></div>
+                    <div class="stat-number">60,000+</div>
+                    <div class="stat-label">Total Upvotes</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="stat-number">2.3M</div>
+                    <div class="stat-label">Top Answer Views</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">プロフィール</h2>
+                <h2 class="section-title" data-i18n="about_title">プロフィール</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="about-content">
@@ -83,25 +129,25 @@
                 <div class="about-text">
                     <h3 class="about-name">hantani（Hantani Sadahiko）</h3>
                     <div class="about-role">
-                        <span class="role-tag">AI時代の創作研究者</span>
-                        <span class="role-tag">技術系ライター</span>
-                        <span class="role-tag">元組み込みプログラマー</span>
+                        <span class="role-tag" data-i18n="about_role1">AI時代の創作研究者</span>
+                        <span class="role-tag" data-i18n="about_role2">技術系ライター</span>
+                        <span class="role-tag" data-i18n="about_role3">元組み込みプログラマー</span>
                     </div>
                     <div class="about-location">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>広島県在住</span>
+                        <span data-i18n="about_location">広島県在住</span>
                     </div>
                     <div class="about-specialty">
-                        <h4><i class="fas fa-star"></i> 専門分野</h4>
-                        <p><strong>Creative Vibe Writing（CVW）</strong>の研究・実践</p>
+                        <h4><i class="fas fa-star"></i> <span data-i18n="about_specialty_title">専門分野</span></h4>
+                        <p data-i18n="about_specialty_content"><strong>Creative Vibe Writing（CVW）</strong>の研究・実践</p>
                     </div>
                     <div class="about-description">
-                        <p>
+                        <p data-i18n="about_desc1">
                             人間とAIの協働による新しい創作手法を研究・実践している。
                             複数のプラットフォームで技術記事を発信し、Quoraで24,000人以上のフォロワーを持つ。
                             技術と文学を橋渡しする新時代のクリエイターとして活動中。
                         </p>
-                        <p>
+                        <p data-i18n="about_desc2">
                             元組み込み系プログラマーとしての技術的バックグラウンドを活かし、
                             Gemini CLI、Cline MCP、Cursor、Codex CLIなど最新のAI開発ツールに関する
                             実践的な記事を多数執筆している。
@@ -116,7 +162,7 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">スキル</h2>
+                <h2 class="section-title" data-i18n="skills_title">スキル</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="skills-grid">
@@ -124,7 +170,7 @@
                     <div class="skill-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="skill-title">AI開発ツール</h3>
+                    <h3 class="skill-title" data-i18n="skill1_title">AI開発ツール</h3>
                     <ul class="skill-list">
                         <li>Codex CLI</li>
                         <li>Gemini CLI</li>
@@ -136,7 +182,7 @@
                     <div class="skill-icon">
                         <i class="fas fa-pen-fancy"></i>
                     </div>
-                    <h3 class="skill-title">技術ライティング</h3>
+                    <h3 class="skill-title" data-i18n="skill2_title">技術ライティング</h3>
                     <ul class="skill-list">
                         <li>技術記事執筆</li>
                         <li>チュートリアル作成</li>
@@ -148,7 +194,7 @@
                     <div class="skill-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h3 class="skill-title">CVW手法</h3>
+                    <h3 class="skill-title" data-i18n="skill3_title">CVW手法</h3>
                     <ul class="skill-list">
                         <li>人間とAIの協働創作</li>
                         <li>Creative Vibe Writing</li>
@@ -160,7 +206,7 @@
                     <div class="skill-icon">
                         <i class="fas fa-microchip"></i>
                     </div>
-                    <h3 class="skill-title">組み込みプログラミング</h3>
+                    <h3 class="skill-title" data-i18n="skill4_title">組み込みプログラミング</h3>
                     <ul class="skill-list">
                         <li>組み込みシステム開発</li>
                         <li>低レイヤープログラミング</li>
@@ -172,11 +218,11 @@
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements">
+    <!-- Achievements Section - Japanese Version Only -->
+    <section id="achievements" class="achievements" data-lang-only="ja">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">実績</h2>
+                <h2 class="section-title" data-i18n="achievements_title">実績</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="achievements-content">
@@ -252,13 +298,27 @@
         </div>
     </section>
 
+    <!-- Featured Quora Answers - English Version Only -->
+    <section id="quora-answers" class="quora-answers" data-lang-only="en" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="achievements_title">Featured Quora Answers</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Top 15 answers by views and engagement</p>
+            </div>
+            <div id="quora-answers-container">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
     <!-- Social Links Section -->
     <section id="social" class="social">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">執筆活動・SNS</h2>
+                <h2 class="section-title" data-i18n="social_title">執筆活動・SNS</h2>
                 <div class="section-divider"></div>
-                <p class="section-description">各プラットフォームで技術記事を発信しています</p>
+                <p class="section-description" data-i18n="social_desc">各プラットフォームで技術記事を発信しています</p>
             </div>
             <div class="social-links">
                 <a href="https://garyohosu.github.io/" target="_blank" rel="noopener noreferrer" class="social-card blog">
@@ -297,7 +357,7 @@
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
-                <a href="https://jp.quora.com/profile/Hantani-Sadahiko" target="_blank" rel="noopener noreferrer" class="social-card quora">
+                <a href="https://www.quora.com/profile/Hantani-Sadahiko" target="_blank" rel="noopener noreferrer" class="social-card quora">
                     <div class="social-icon">
                         <i class="fab fa-quora"></i>
                     </div>
@@ -355,7 +415,7 @@
                         <a href="https://x.com/garyo" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
                             <i class="fab fa-x-twitter"></i>
                         </a>
-                        <a href="https://jp.quora.com/profile/Hantani-Sadahiko" target="_blank" rel="noopener noreferrer" title="Quora">
+                        <a href="https://www.quora.com/profile/Hantani-Sadahiko" target="_blank" rel="noopener noreferrer" title="Quora">
                             <i class="fab fa-quora"></i>
                         </a>
                         <a href="https://github.com/garyohosu" target="_blank" rel="noopener noreferrer" title="GitHub">

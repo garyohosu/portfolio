@@ -745,6 +745,177 @@ section {
 }
 
 /* ========================================
+   Language Toggle
+   ======================================== */
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-family: inherit;
+    padding: 5px 10px;
+}
+
+.lang-btn:hover {
+    color: #2563eb;
+}
+
+.lang-btn.active {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.lang-separator {
+    color: #ccc;
+}
+
+/* ========================================
+   Stats Section (English Version)
+   ======================================== */
+
+.stats {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 0;
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* ========================================
+   Quora Answers Section (English Version)
+   ======================================== */
+
+.quora-answers {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.answer-category {
+    margin-bottom: 60px;
+}
+
+.answer-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.answers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.answer-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.answer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: #2563eb;
+}
+
+.answer-question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.answer-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stat-item i {
+    color: #94a3b8;
+}
+
+.answer-cta {
+    margin-top: auto;
+    color: #2563eb;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.answer-card:hover .answer-cta {
+    gap: 12px;
+}
+
+.answer-card:hover .answer-cta i {
+    transform: translateX(3px);
+}
+
+/* ========================================
    Footer
 ======================================== */
 
@@ -872,6 +1043,13 @@ section {
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
+
+    .lang-toggle {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        font-size: 12px;
+    }
     
     /* ヒーローセクション */
     .hero-name {
@@ -943,7 +1121,30 @@ section {
     .social-links {
         grid-template-columns: 1fr;
     }
-    
+
+    /* Stats Section */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    /* Quora Answers Section */
+    .answers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+
     /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
@@ -955,13 +1156,17 @@ section {
     .hero-name {
         font-size: 2rem;
     }
-    
+
     .achievement-stats {
         grid-template-columns: 1fr;
     }
-    
+
     .achievement-item {
         flex-direction: column;
         text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
