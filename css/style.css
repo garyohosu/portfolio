@@ -916,6 +916,151 @@ section {
 }
 
 /* ========================================
+   Note Achievements Section (Japanese Version)
+   ======================================== */
+
+.note-achievements {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.note-achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.note-achievement-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.note-achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #2563eb, #8b5cf6);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.note-achievement-card.featured::before {
+    background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+.note-achievement-card.premium::before {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+}
+
+.note-achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    border-color: #2563eb;
+}
+
+.note-achievement-card:hover::before {
+    transform: scaleX(1);
+}
+
+.achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    align-self: flex-start;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.achievement-badge.premium {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.achievement-badge i {
+    font-size: 1rem;
+}
+
+.note-achievement-content {
+    flex: 1;
+}
+
+.note-achievement-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.note-achievement-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.note-achievement-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.note-achievement-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.meta-item i {
+    color: #2563eb;
+}
+
+.note-achievement-arrow {
+    align-self: flex-end;
+    font-size: 1.5rem;
+    color: #94a3b8;
+    transition: all 0.3s ease;
+}
+
+.note-achievement-card:hover .note-achievement-arrow {
+    color: #2563eb;
+    transform: translateX(5px);
+}
+
+/* ========================================
    Footer
 ======================================== */
 
@@ -1143,6 +1288,19 @@ section {
 
     .category-title {
         font-size: 1.5rem;
+    }
+
+    /* Note Achievements Section */
+    .note-achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .note-achievement-card {
+        padding: 25px;
+    }
+
+    .note-achievement-title {
+        font-size: 1.3rem;
     }
 
     /* Footer */

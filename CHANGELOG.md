@@ -6,6 +6,163 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.3] - 2025-01-15
+
+### Added
+
+**note執筆実績セクションの追加**
+
+日本語版にnote執筆実績を紹介する新しいセクションを追加しました。
+
+#### 新規セクション: note執筆実績
+
+**掲載された実績:**
+
+1. **OpenPromptコンテスト入賞**
+   - タイトル: 「AIテキストを『人間味あふれる文章』に変えるプロンプト」
+   - URL: https://note.com/hantani/n/n816fdc8075e2
+   - 成果: けんすう氏主催のOpenPromptコンテストで入賞
+   - 内容: AIが書いた文章を自然な人間らしい文体に変換するプロンプト技術が評価された
+
+2. **初の有料記事を公開**
+   - タイトル: 「AIに自分のnoteを査定させてみた」
+   - URL: https://note.com/hantani/n/n7b252fd4bd98
+   - 公開日: 2025年11月15日
+   - 内容: Genspark AIブラウザを使用して自身のnote記事を分析し、有料記事としての適正価格をAIに提案させる実験的な取り組み
+
+#### デザイン特徴
+
+**カードデザイン:**
+- 2カラムグリッドレイアウト（レスポンシブ対応）
+- グラデーションバッジ（入賞バッジ: オレンジ→赤、有料記事バッジ: 紫→ピンク）
+- ホバーエフェクト（カードが持ち上がり、上部にグラデーションバーが表示）
+- 矢印アニメーション（ホバー時に右に移動）
+
+**バッジシステム:**
+- 入賞記事: トロフィーアイコン + オレンジ-赤グラデーション
+- 有料記事: スターアイコン + 紫-ピンクグラデーション
+
+**メタ情報表示:**
+- アイコン付きメタデータ（日付、記事タイプ、受賞情報）
+- 視覚的な区切り線（上部にボーダー）
+
+#### 技術実装
+
+**HTML (index.html):**
+```html
+<section id="note-achievements" class="note-achievements" data-lang-only="ja">
+  <!-- note執筆実績カード × 2 -->
+</section>
+```
+- `data-lang-only="ja"`: 日本語版のみ表示
+- `data-i18n`属性: 14個の翻訳可能要素
+- 外部リンク: `target="_blank" rel="noopener noreferrer"`
+
+**JavaScript (js/main.js):**
+```javascript
+// 日本語版翻訳（14キー）
+note_achievements_title: 'note執筆実績'
+note_achievements_desc: '技術記事やAI研究の成果を発信'
+note_achievement_badge: '入賞'
+note_achievement_badge_premium: '有料記事'
+note_achievement1_title: 'OpenPromptコンテスト入賞'
+... (計14キー)
+
+// 英語版翻訳（一貫性のため提供）
+note_achievements_title: 'note Writing Achievements'
+... (計14キー)
+```
+
+**CSS (css/style.css):**
+```css
+/* note実績セクション（約140行） */
+.note-achievements { /* セクションコンテナ */ }
+.note-achievements-grid { /* 2カラムグリッド */ }
+.note-achievement-card { /* カードスタイル */ }
+.achievement-badge { /* バッジスタイル */ }
+.note-achievement-content { /* コンテンツエリア */ }
+.note-achievement-meta { /* メタ情報 */ }
+.note-achievement-arrow { /* 矢印アニメーション */ }
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .note-achievements-grid { grid-template-columns: 1fr; }
+}
+```
+
+#### セクション配置
+
+**日本語版の構成:**
+1. Hero Section
+2. About Section
+3. Skills Section
+4. Achievements Section（既存の実績）
+5. **note執筆実績 Section（NEW）**
+6. Social Links Section
+7. Footer
+
+**英語版の構成:**
+1. Hero Section
+2. Stats Section
+3. About Section
+4. Skills Section
+5. Featured Quora Answers Section
+6. Social Links Section
+7. Footer
+
+note執筆実績セクションは日本語版専用のため、英語版には表示されません。
+
+#### バイリンガル対応
+
+- **日本語版**: `data-lang-only="ja"`で表示制御
+- **英語版**: 非表示（Quora Answersセクションが代わりに表示される）
+- **翻訳キー**: 両言語に完全対応（一貫性のため）
+
+#### スタイリング詳細
+
+**カラーパレット:**
+- 入賞バッジ: `linear-gradient(135deg, #f59e0b, #ef4444)`
+- 有料記事バッジ: `linear-gradient(135deg, #8b5cf6, #ec4899)`
+- ホバー時ボーダー: `#2563eb`
+- テキスト: `#1e293b`（タイトル）、`#64748b`（説明）
+
+**アニメーション:**
+- カードホバー: `translateY(-5px)` + シャドウ拡大
+- 上部グラデーションバー: `scaleX(0)` → `scaleX(1)`
+- 矢印: `translateX(5px)` + カラー変更
+
+**レスポンシブブレークポイント:**
+- デスクトップ: 2カラムグリッド（450px最小幅）
+- タブレット（≤768px）: 1カラムグリッド
+- モバイル: パディング調整（30px → 25px）
+
+### Changed
+
+- 実績セクションを拡張（既存の実績 + note執筆実績）
+- セクション構成の最適化（日本語版のみ）
+
+### Technical Details
+
+**Files Modified:**
+- `index.html` - note執筆実績セクション追加（+64行）
+- `js/main.js` - 翻訳キー追加（日本語14キー、英語14キー、計+28行）
+- `css/style.css` - note実績スタイル追加（+142行）
+- `CHANGELOG.md` - この変更履歴
+
+**Lines Changed:**
+- HTML: +64行
+- JavaScript: +28行
+- CSS: +142行
+- Total: +234行
+
+**新規翻訳キー:** 28個（日本語14 + 英語14）
+
+**外部リンク:**
+- OpenPrompt入賞記事: https://note.com/hantani/n/n816fdc8075e2
+- 初の有料記事: https://note.com/hantani/n/n7b252fd4bd98
+
+---
+
 ## [1.1.2] - 2025-01-13
 
 ### Fixed

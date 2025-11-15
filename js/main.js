@@ -70,6 +70,21 @@ const translations = {
         stat4_number: '先駆者',
         stat4_label: 'CVW手法研究',
 
+        // Note Achievements Section
+        note_achievements_title: 'note執筆実績',
+        note_achievements_desc: '技術記事やAI研究の成果を発信',
+        note_achievement_badge: '入賞',
+        note_achievement_badge_premium: '有料記事',
+        note_achievement1_title: 'OpenPromptコンテスト入賞',
+        note_achievement1_subtitle: 'AIテキストを「人間味あふれる文章」に変えるプロンプト',
+        note_achievement1_desc: 'けんすう氏主催のOpenPromptコンテストで入賞。AIが書いた文章を自然な人間らしい文体に変換するプロンプト技術が評価されました。',
+        note_achievement1_award: 'OpenPrompt受賞作品',
+        note_achievement2_title: '初の有料記事を公開',
+        note_achievement2_subtitle: 'AIに自分のnoteを査定させてみた',
+        note_achievement2_desc: 'Genspark AIブラウザを使用して、自身のnote記事を分析。有料記事としての適正価格をAIに提案させる実験的な取り組みを記事化しました。',
+        note_achievement2_date: '2025年11月15日',
+        note_achievement2_type: '有料記事',
+
         // Social Section
         social_title: '執筆活動・SNS',
         social_desc: '各プラットフォームで技術記事を発信しています',
@@ -153,6 +168,21 @@ const translations = {
         // Featured Answers Section (replaces Achievements)
         achievements_title: 'Featured Quora Answers',
         achievements_subtitle: 'Top 15 answers by views and engagement',
+
+        // Note Achievements Section (Japanese version only, but translations provided)
+        note_achievements_title: 'note Writing Achievements',
+        note_achievements_desc: 'Publishing technical articles and AI research findings',
+        note_achievement_badge: 'Winner',
+        note_achievement_badge_premium: 'Premium Article',
+        note_achievement1_title: 'OpenPrompt Contest Winner',
+        note_achievement1_subtitle: 'Prompt that transforms AI text into "human-like writing"',
+        note_achievement1_desc: 'Won the OpenPrompt contest hosted by Kensu. Recognized for a prompt technique that converts AI-generated text into natural, human-like writing.',
+        note_achievement1_award: 'OpenPrompt Award Winner',
+        note_achievement2_title: 'First Premium Article Published',
+        note_achievement2_subtitle: 'Having AI evaluate my note articles',
+        note_achievement2_desc: 'Used Genspark AI Browser to analyze my note articles. An experimental approach to have AI suggest appropriate pricing for premium articles.',
+        note_achievement2_date: 'November 15, 2025',
+        note_achievement2_type: 'Premium Article',
 
         // Social Section
         social_title: 'Connect With Me',
