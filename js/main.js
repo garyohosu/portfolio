@@ -63,7 +63,7 @@ const translations = {
         achievements_title: '実績',
         stat1_number: '24,000+',
         stat1_label: '総フォロワー数',
-        stat2_number: '4',
+        stat2_number: '5',
         stat2_label: '活動プラットフォーム',
         stat3_number: '多数',
         stat3_label: '専門記事執筆',
