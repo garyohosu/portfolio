@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Mobile Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 10px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .success { background: rgba(76, 175, 80, 0.3); }
+        .error { background: rgba(244, 67, 54, 0.3); }
+        .info { background: rgba(33, 150, 243, 0.3); }
+    </style>
+</head>
+<body>
+    <div class="card success">
+        <h1>✅ スマホテスト成功！</h1>
+        <p>このページが見えているなら、スマホでのアクセスは可能です。</p>
+        <p>時刻: <span id="time"></span></p>
+    </div>
+
+    <div class="card info">
+        <h2>📱 デバイス情報</h2>
+        <div id="device"></div>
+    </div>
+
+    <div class="card">
+        <h2>🔗 メインサイトテスト</h2>
+        <p><a href="index.html" style="color: #fff; text-decoration: underline;">メインページに戻る</a></p>
+        <p><a href="https://hantani-portfolio.pages.dev/" style="color: #fff; text-decoration: underline;">Cloudflare Pages版</a></p>
+    </div>
+
+    <div class="card error">
+        <h2>❌ エラー情報</h2>
+        <div id="errors">エラーなし</div>
+    </div>
+
+    <script>
+        // 現在時刻表示
+        document.getElementById('time').textContent = new Date().toLocaleString('ja-JP');
+        
+        // デバイス情報
+        document.getElementById('device').innerHTML = `
+            <p>画面: ${screen.width} x ${screen.height}</p>
+            <p>ビューポート: ${window.innerWidth} x ${window.innerHeight}</p>
+            <p>ユーザーエージェント: ${navigator.userAgent.substring(0, 50)}...</p>
+        `;
+
+        // エラー監視
+        let errorCount = 0;
+        window.addEventListener('error', function(e) {
+            errorCount++;
+            document.getElementById('errors').innerHTML = `
+                <p>エラー${errorCount}: ${e.message}</p>
+                <p>ファイル: ${e.filename}:${e.lineno}</p>
+            `;
+        });
+
+        // 5秒後に自動テスト
+        setTimeout(() => {
+            if (errorCount === 0) {
+                document.getElementById('errors').innerHTML = '<p style="color: #4CAF50;">✅ JavaScriptエラーなし</p>';
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
