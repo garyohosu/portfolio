@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+        }
+        .debug-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .error {
+            background: #fee;
+            border: 1px solid #f00;
+        }
+        .success {
+            background: #efe;
+            border: 1px solid #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info success">
+        <h2>モバイルデバッグテストページ</h2>
+        <p>このページが見える場合、基本的なHTMLは動作しています。</p>
+    </div>
+
+    <div class="debug-info">
+        <h3>デバイス情報</h3>
+        <div id="device-info"></div>
+    </div>
+
+    <div class="debug-info">
+        <h3>外部リソーステスト</h3>
+        <div id="resource-test"></div>
+    </div>
+
+    <div class="debug-info">
+        <h3>エラーログ</h3>
+        <div id="error-log"></div>
+    </div>
+
+    <script>
+        // エラーログ収集
+        const errorLog = document.getElementById('error-log');
+        const errors = [];
+        
+        window.addEventListener('error', function(e) {
+            errors.push(`JavaScript Error: ${e.message} at ${e.filename}:${e.lineno}`);
+            updateErrorLog();
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            errors.push(`Unhandled Promise Rejection: ${e.reason}`);
+            updateErrorLog();
+        });
+
+        function updateErrorLog() {
+            errorLog.innerHTML = errors.length > 0 
+                ? errors.map(err => `<p style="color: red;">${err}</p>`).join('')
+                : '<p style="color: green;">エラーなし</p>';
+        }
+
+        // デバイス情報表示
+        document.getElementById('device-info').innerHTML = `
+            <p><strong>ユーザーエージェント:</strong> ${navigator.userAgent}</p>
+            <p><strong>画面サイズ:</strong> ${screen.width} x ${screen.height}</p>
+            <p><strong>ビューポート:</strong> ${window.innerWidth} x ${window.innerHeight}</p>
+            <p><strong>デバイスピクセル比:</strong> ${window.devicePixelRatio}</p>
+            <p><strong>タッチサポート:</strong> ${('ontouchstart' in window) ? 'あり' : 'なし'}</p>
+        `;
+
+        // 外部リソーステスト
+        const resourceTest = document.getElementById('resource-test');
+        
+        // Google Fontsテスト
+        const fontTest = new FontFace('Noto Sans JP', 'url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap)');
+        fontTest.load().then(() => {
+            document.getElementById('font-test').innerHTML = '<p style="color: green;">✓ Google Fonts 読み込み成功</p>';
+        }).catch(() => {
+            document.getElementById('font-test').innerHTML = '<p style="color: red;">✗ Google Fonts 読み込み失敗</p>';
+        });
+
+        resourceTest.innerHTML = `
+            <div id="font-test"><p style="color: orange;">Google Fonts テスト中...</p></div>
+            <p><strong>現在時刻:</strong> ${new Date().toLocaleString()}</p>
+        `;
+
+        // 初期エラーログ表示
+        updateErrorLog();
+    </script>
+</body>
+</html>
