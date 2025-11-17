@@ -745,6 +745,164 @@ section {
 }
 
 /* ========================================
+   Platform Card (OpenPrompt)
+   ======================================== */
+
+.platform-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--border-color);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: var(--transition-normal);
+}
+
+.platform-card:hover::before {
+    transform: scaleX(1);
+}
+
+.platform-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transition: var(--transition-normal);
+}
+
+.platform-info {
+    flex: 1;
+}
+
+.platform-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-primary);
+}
+
+.platform-handle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.platform-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.platform-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: scale(1.1);
+}
+
+.platform-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.platform-stats .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.platform-stats .stat-item i {
+    color: var(--primary-color);
+}
+
+.platform-description {
+    margin-bottom: 1.5rem;
+}
+
+.platform-description p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.platform-highlights {
+    background-color: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid;
+    border-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) 1;
+}
+
+.platform-highlights h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.platform-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.platform-highlights ul li {
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.platform-highlights ul li:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* OpenPrompt specific styling */
+.platform-card[data-platform="openprompt"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    border-color: #667eea;
+}
+
+.platform-card[data-platform="openprompt"]:hover .platform-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ========================================
    Language Toggle
    ======================================== */
 

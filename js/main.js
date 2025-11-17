@@ -99,6 +99,16 @@ const translations = {
         social_github_title: 'GitHub',
         social_github_desc: 'コードとプロジェクトを公開',
 
+        // OpenPrompt section
+        openprompt_prompts: 'プロンプト投稿',
+        openprompt_community: 'コミュニティ参加',
+        openprompt_description: '実践的なAIプロンプトを投稿・共有。日常業務での活用事例や、効果的なプロンプトエンジニアリングのノウハウを発信しています。',
+        openprompt_highlights_title: '主な投稿テーマ',
+        openprompt_theme_1: '🍜 AIを活用した地域情報検索（駅周辺のグルメ探し等）',
+        openprompt_theme_2: '💻 プログラミング支援プロンプト',
+        openprompt_theme_3: '✍️ 文章作成・校正支援プロンプト',
+        openprompt_theme_4: '🔧 業務効率化のための実践的プロンプト',
+
         // Footer
         footer_brand_desc: 'AI時代の創作研究者',
         footer_links_title: 'リンク',
@@ -197,6 +207,16 @@ const translations = {
         social_quora_desc: '24,000+ Followers',
         social_github_title: 'GitHub',
         social_github_desc: 'Code & Projects',
+
+        // OpenPrompt section
+        openprompt_prompts: 'Prompt Contributions',
+        openprompt_community: 'Community Participation',
+        openprompt_description: 'Posting and sharing practical AI prompts. Publishing use cases in daily work and know-how of effective prompt engineering.',
+        openprompt_highlights_title: 'Main Topics',
+        openprompt_theme_1: '🍜 AI-powered local information search (restaurant finding near stations, etc.)',
+        openprompt_theme_2: '💻 Programming assistance prompts',
+        openprompt_theme_3: '✍️ Writing and proofreading assistance prompts',
+        openprompt_theme_4: '🔧 Practical prompts for work efficiency',
 
         // Footer
         footer_brand_desc: 'Cultural Bridge Builder',
