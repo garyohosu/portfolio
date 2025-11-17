@@ -109,6 +109,16 @@ const translations = {
         openprompt_theme_3: '✍️ 文章作成・校正支援プロンプト',
         openprompt_theme_4: '🔧 業務効率化のための実践的プロンプト',
 
+        // Quora Space: ChatGPT情報交換所
+        'quora-space-title': 'Quoraスペース',
+        'quora-space-name': 'ChatGPT情報交換所',
+        'quora-space-description': 'ChatGPTなどのChatAIに関する情報交換・議論のコミュニティを運営しています。AI技術の最新動向や活用事例について、6,000人以上のメンバーと交流しています。',
+        'quora-space-followers': 'フォロワー',
+        'quora-space-followers-count': '6,000+',
+        'quora-space-rank': 'Quora全体ランキング',
+        'quora-space-rank-value': '30位',
+        'quora-space-cta': 'スペースを見る',
+
         // Footer
         footer_brand_desc: 'AI時代の創作研究者',
         footer_links_title: 'リンク',
@@ -217,6 +227,16 @@ const translations = {
         openprompt_theme_2: '💻 Programming assistance prompts',
         openprompt_theme_3: '✍️ Writing and proofreading assistance prompts',
         openprompt_theme_4: '🔧 Practical prompts for work efficiency',
+
+        // Quora Space: ChatGPT Information Exchange
+        'quora-space-title': 'Quora Space',
+        'quora-space-name': 'ChatGPT Information Exchange',
+        'quora-space-description': 'Owner of the \'ChatGPT Information Exchange\' Quora Space, a community with over 6,000 followers discussing ChatGPT and AI technologies. Ranked 30th among all Quora Spaces in Japan.',
+        'quora-space-followers': 'Followers',
+        'quora-space-followers-count': '6,000+',
+        'quora-space-rank': 'Quora Japan Ranking',
+        'quora-space-rank-value': '#30',
+        'quora-space-cta': 'Visit Space',
 
         // Footer
         footer_brand_desc: 'Cultural Bridge Builder',
