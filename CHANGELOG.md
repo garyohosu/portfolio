@@ -6,6 +6,47 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.4] - 2025-01-19
+
+### Fixed
+
+**外部リンクURLの修正**
+
+間違っていた2つの外部リンクURLを修正しました。
+
+1. **OpenPrompt URL** (日本語版のみ)
+   - 修正前: `https://openprompt.8card.net/user/hantani` (404エラー)
+   - 修正後: `https://openprompt.jp/profile/garyo`
+   - 影響: index.html:384
+
+2. **Quoraスペース（ChatGPT情報交換所）URL** (日本語版のみ)
+   - 修正前: `https://www.quora.com/q/chatgptjp` (英語版Quoraにリダイレクト)
+   - 修正後: `https://chatgpt-information.quora.com/`
+   - 影響: index.html:396
+
+#### 修正詳細
+
+両リンクは日本語版（`data-lang-only="ja"`）の執筆活動・SNSセクションに配置されています。
+
+**OpenPrompt:**
+- 実践的なAIプロンプトを投稿・共有するプラットフォーム
+- 正しいプロフィールページへのアクセスが可能になりました
+
+**Quoraスペース（ChatGPT情報交換所）:**
+- 6,000人以上のメンバーがいるコミュニティ
+- 正しいコミュニティページへのアクセスが可能になりました
+
+#### Technical Details
+
+**Files Modified:**
+- `index.html` - 2つの外部リンクURLを修正
+- `CHANGELOG.md` - この変更履歴
+
+**Lines Changed:**
+- HTML: 2行修正
+
+---
+
 ## [1.1.3] - 2025-01-15
 
 ### Added
