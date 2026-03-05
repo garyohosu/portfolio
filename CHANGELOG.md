@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.5] - 2026-03-05
+
+### Added
+
+**バーチャルカンパニーセクションの追加**
+
+日本語版ポートフォリオに「バーチャルカンパニー」セクションを新設。AIエージェントを活用した実験的プロジェクト5件を紹介リンクとして掲載。
+
+- **Auto AI Blog** - AIエージェントが記事を自動生成するブログシステム
+- **MagicBoxAI** - AI生成コンテンツ公開プラットフォーム
+- **AITecBlog** - AIによる技術ブログ自動生成プロジェクト
+- **AI-Broker** - AI投資分析・トレーディングシステム
+- **WebGame** - AI生成ブラウザゲーム公開プロジェクト
+
+影響ファイル: `index.html`、`css/style.css`
+
+---
+
 ## [1.1.4] - 2025-01-19
 
 ### Fixed
