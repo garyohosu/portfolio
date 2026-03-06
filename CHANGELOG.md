@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.6] - 2026-03-06
+
+### Added
+
+**AozoraDailyTranslationsをバーチャルカンパニーに追加**
+
+- **AozoraDailyTranslations** - 青空文庫のパブリックドメイン作品を毎日1作品自動英訳してGitHub Pagesに公開するパイプライン
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.1.5] - 2026-03-05
 
 ### Added
