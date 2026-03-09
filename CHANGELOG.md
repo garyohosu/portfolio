@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.8] - 2026-03-09
+
+### Fixed
+
+**Writerのリンク先を公開サイトURLに修正**
+
+- `Writer` カードのリンク先をリポジトリURLから `https://garyohosu.github.io/writer/` に変更
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.1.7] - 2026-03-09
 
 ### Added
