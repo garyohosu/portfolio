@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.7] - 2026-03-09
+
+### Added
+
+**Writerをバーチャルカンパニーに追加**
+
+- **Writer** - AIが毎日1本の短編小説を自動生成・品質確認し、GitHub Pages に公開するバーチャル文芸サイト
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.1.6] - 2026-03-06
 
 ### Added
