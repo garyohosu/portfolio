@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.0] - 2026-03-10
+
+### Added
+
+**CompanyGuardianをバーチャルカンパニーに追加**
+
+- **CompanyGuardian** - 複数のバーチャルカンパニーを自動巡回・監視し、異常検知・インシデント記録・再発防止策を蓄積する自動化監視システム
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.1.9] - 2026-03-10
 
 ### Added
