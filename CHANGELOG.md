@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.1.9] - 2026-03-10
+
+### Added
+
+**OpenClaw Blogをバーチャルカンパニーに追加**
+
+- **OpenClaw Blog** - Rust製の軽量自立型AIエージェント基盤「OpenClaw」の開発記録ブログ
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.1.8] - 2026-03-09
 
 ### Fixed
