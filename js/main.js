@@ -106,6 +106,8 @@ const translations = {
         social_quora_desc: '24,000人以上のフォロワー',
         social_github_title: 'GitHub',
         social_github_desc: 'コードとプロジェクトを公開',
+        social_virtual_company_title: 'バーチャルカンパニー',
+        social_virtual_company_desc: 'インタラクティブなシミュレーション作品',
 
         // OpenPrompt section
         openprompt_prompts: 'プロンプト投稿',
@@ -241,6 +243,8 @@ const translations = {
         social_quora_desc: '24,000+ Followers',
         social_github_title: 'GitHub',
         social_github_desc: 'Code & Projects',
+        social_virtual_company_title: 'Virtual Company',
+        social_virtual_company_desc: 'Interactive simulation project',
 
         // OpenPrompt section
         openprompt_prompts: 'Prompt Contributions',

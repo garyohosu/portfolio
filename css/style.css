@@ -714,6 +714,11 @@ section {
     color: white;
 }
 
+.social-card.virtual-company .social-icon {
+    background-color: #0f766e;
+    color: white;
+}
+
 .social-card:hover .social-icon {
     transform: scale(1.1) rotate(5deg);
 }
