@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.1] - 2026-03-11
+
+### Fixed
+
+**datingSim カードの説明を修正**
+
+- タイトルを「バーチャルカンパニー」→「放課後シグナル」に修正
+- 説明文をREADMEに基づく正確な内容に修正（学園恋愛シミュレーションゲーム）
+- アイコンを `fa-building` → `fa-heart` に変更
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.2.0] - 2026-03-10
 
 ### Added
