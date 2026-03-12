@@ -644,7 +644,8 @@ function initScrollAnimations() {
         .stat-card,
         .achievement-item,
         .social-card,
-        .about-content
+        .about-content,
+        .featured-note-card
     `);
     
     animatedElements.forEach(element => {
