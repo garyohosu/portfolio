@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.3] - 2026-03-23
+
+### Added
+
+**OpenClaw App Company をバーチャルカンパニーに追加**
+
+- バーチャルカンパニーセクションに OpenClaw App Company カードを追加
+- 公開URL: https://garyohosu.github.io/openclaw-app-company/
+- アイコン: `fa-code-branch`
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.2.2] - 2026-03-13
 
 ### Added
