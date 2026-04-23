@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.4] - 2026-04-23
+
+### Added
+
+**Yuko Blog をバーチャルカンパニーに追加**
+
+- バーチャルカンパニーセクションに Yuko Blog カードを追加
+- 公開URL: https://garyohosu.github.io/yuko-blog/
+- アイコン: `fa-feather-alt`
+- コンセプト: 「やさしく、ときどききらっと。」日常の小さな出来事や心が動いた瞬間を綴るパーソナルブログ
+
+影響ファイル: `index.html`
+
+---
+
 ## [1.2.3] - 2026-03-23
 
 ### Added
