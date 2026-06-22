@@ -6,6 +6,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [1.2.6] - 2026-06-22
+
+### Added
+
+**国会発言AIウォッチをバーチャルカンパニーに追加**
+
+- バーチャルカンパニーセクションに 国会発言AIウォッチ カードを追加
+- 公開URL: https://kokkai-watch.garyohosu.workers.dev
+- アイコン: `fa-landmark`
+- 概要: 国会会議録の発言をAIで要約・タグ付けし、テーマ・都道府県・議員別に追える政治発言ウォッチサイト
+
+影響ファイル: `index.html`
+
+---
+
+## [1.2.5] - 2026-06-22
+
+### Fixed
+
+**バイリンガル表示の小修正**
+
+- 英語版の `Featured Answers` 導線を Quora 回答セクションへ切り替え
+- 英語版のヒーロー CTA を Quora 回答セクションへ切り替え
+- `data-lang-only` 表示復帰時に CSS 本来の display を維持するよう修正
+- フッターの文言と実績リンクを言語切替に対応
+
+影響ファイル: `index.html`, `js/main.js`
+
+---
+
 ## [1.2.4] - 2026-04-23
 
 ### Added

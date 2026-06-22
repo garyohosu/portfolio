@@ -392,7 +392,18 @@ const quoraAnswers = [
 // Get current language from URL parameter
 function getCurrentLang() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('lang') || 'ja';
+    const lang = urlParams.get('lang') || 'ja';
+    return translations[lang] ? lang : 'ja';
+}
+
+// Update links whose destination changes by language.
+function updateLanguageLinks(lang) {
+    document.querySelectorAll('[data-lang-href-ja][data-lang-href-en]').forEach(el => {
+        const href = el.getAttribute(`data-lang-href-${lang}`);
+        if (href) {
+            el.setAttribute('href', href);
+        }
+    });
 }
 
 // Update page content based on language
@@ -426,8 +437,10 @@ function updateContent(lang) {
     // Show/hide language-specific sections
     document.querySelectorAll('[data-lang-only]').forEach(el => {
         const targetLang = el.getAttribute('data-lang-only');
-        el.style.display = targetLang === lang ? 'block' : 'none';
+        el.style.display = targetLang === lang ? '' : 'none';
     });
+
+    updateLanguageLinks(lang);
 
     // Update active language button
     document.querySelectorAll('.lang-btn').forEach(btn => {
